@@ -1,0 +1,149 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><fmt:message key="error_page_404.title"/></title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"/>
+    <script src="js/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header_items"  >
+                <a class="header_logo" href="#">
+                    <div class="header_logo__img">
+                        <img src="img/logo.svg" alt="logo">
+                    </div>
+                    <div class="header_logo__name">
+                       Flat rent service
+                    </div>
+                </a>
+                <div class="usr__profile-logo__btn">
+                    <a href="#"><img src="img/userProfileLogo.svg" alt=""/></a>
+                 </div>
+                <div class="header_btn">
+                    <!-- <div class="header_signin btnt">
+                        <a href="#">Sign in</a>
+                    </div> -->
+                    
+                    <div class="header_register btnt">
+                        <a href="#">Sign up</a>
+                    </div>
+                    <div class="header_language">
+    
+                          <div class="menu">
+                            <a class="menu__title" href="#">language</a>
+                         <div class="menu__down">
+                <div class="menu__section">
+                    <a href="#">
+                        <img src="img/eng.svg" alt=""></a></div>
+                <div class="menu__section">
+                    <a href="#">
+                        <img src="/img/ru.svg" alt=""></a></div>
+                          </div>
+                       </div>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="adv">
+        <div class="container">
+            <div class="adv__handler__bckgrnd">
+                    <div class="adv__items">
+                        <p class="adv__title">
+                        Create an advertisement
+                        </p>
+                        <form action="controller" method="POST">
+                            <div class="row__items-title">
+                            <p>Location</p>
+                            </div>
+                        <div class="row_items-input">
+                            <input class="frst__input__item" name="city" placeholder="City"/>
+                            <input class="input__item" name="district" placeholder="District"/>
+                            <input class="input__item" name="street" placeholder="Street"/>
+                            <input class="input__item" name="houseNumber" placeholder="House number"/>
+                        </div>
+                            <div class="row__items-title">
+                            <p>Flat parameters</p>
+                            </div>
+                            <div class="row_items-input">
+                                <input class="frst__input__item" name="rooms" placeholder="Rooms"/>
+                                <input class="input__item" name="floor" placeholder="Floor"/>
+                                <input class="input__item" name="area" placeholder="Area"/>
+                                <input class="input__item" name="decorating" placeholder="Decorating"/>
+                            </div>
+
+                            <div class="check-box__items">
+                                <label class="check-box__frst-item">
+                                    <input type="checkbox">
+                                    <span>Furniture</span>
+                                </label> 
+                                <label class="check-box__item">
+                                    <input type="checkbox">
+                                    <span class="check-box__title">Children</span>
+                                </label> 
+                                <label class="check-box__item">
+                                    <input type="checkbox">
+                                    <span>Home appliances</span>
+                                </label> 
+                                <label class="check-box__item">
+                                    <input type="checkbox">
+                                    <span>Pets</span>
+                                </label> 
+                                <label class="check-box__item">
+                                    <input type="checkbox">
+                                    <span>Internet</span>
+                                </label> 
+                              </div>
+                              <div class="row__items-title">
+                                <p>Add pictures</p>
+                                </div>
+                              <div class="row_items-input">
+                                <label><input class="input__items-file dbf"type="file" id="id_files" multiple accept="image/*"/>+
+                                    <img class="preview__img" id="preview">
+                                </label>
+                                <label><input class="input__items-file" type="file" name="floor"/>+</label>
+                                <label><input class="input__items-file" type="file" name="area" />+</label>
+                            </div>
+
+                            <div class="row__items-title">
+                                <p>Give more info</p>
+                                </div>
+
+                            <div class="usrs__input">
+                                <textarea class="usrs__input__item" rows="10" cols="45" name="usersDescription" placeholder="Text..."></textarea>
+                            </div>
+                
+                            <button class="add__adv__btn" type="submit" name="command" value="SIGN_UP">Добавить</button> 
+                            
+                        </form>
+                    </div>
+  
+            </div>
+
+        </div>
+    </section>
+</body>
+</html>
+<script>
+var fileField = document.getElementById('id_files');
+var preview = document.getElementById('preview');
+fileField.addEventListener('change', function(event) {
+    for(var x = 0; x < event.target.files.length; x++) {
+        (function(i) {
+            var reader = new FileReader();
+            var img = document.createElement('img');
+            reader.onload = function(event) {
+                img.setAttribute('src', event.target.result);
+                img.setAttribute('class', 'preview');
+                preview.appendChild(img);
+            }
+            reader.readAsDataURL(event.target.files[x]);
+        })(x);
+    }
+}, false);
+
+</script>
