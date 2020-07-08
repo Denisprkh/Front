@@ -19,14 +19,11 @@
                        Flat rent service
                     </div>
                 </a>
-                <div class="usr__profile-logo__btn">
-                    <a href="#"><img src="img/userProfileLogo.svg" alt=""/></a>
-                 </div>
                 <div class="header_btn">
-                    <!-- <div class="header_signin btnt">
+                    <div class="header_signin btnt">
                         <a href="#">Sign in</a>
-                    </div> -->
-                    
+                    </div>
+                
                     <div class="header_register btnt">
                         <a href="#">Sign up</a>
                     </div>
@@ -102,11 +99,20 @@
                                 <p>Add pictures</p>
                                 </div>
                               <div class="row_items-input">
-                                <label><input class="input__items-file dbf"type="file" id="id_files" multiple accept="image/*"/>+
-                                    <img class="preview__img" id="preview">
+                                <label><input class="input__items-file dbf"type="file" id="id_files" multiple accept="image/*">+
+                                    <div id="preview" class="preview">
+                                        <img id="preview">getPhoto(id)</img>
+                               </div>
+                            </input>
                                 </label>
-                                <label><input class="input__items-file" type="file" name="floor"/>+</label>
-                                <label><input class="input__items-file" type="file" name="area" />+</label>
+                                <label><input class="input__items-file" type="file" name="floor"/>+
+                                    <div id="preview">
+                                        <img id="preview">
+                               </div></label>
+                                <label><input class="input__items-file" type="file" name="area" />+
+                                    <div id="preview">
+                                        <img id="preview">
+                               </div></label>
                             </div>
 
                             <div class="row__items-title">
@@ -129,8 +135,9 @@
 </body>
 </html>
 <script>
+function getPhoto(preview){
 var fileField = document.getElementById('id_files');
-var preview = document.getElementById('preview');
+var preview = document.getElementById(preview);
 fileField.addEventListener('change', function(event) {
     for(var x = 0; x < event.target.files.length; x++) {
         (function(i) {
@@ -145,5 +152,6 @@ fileField.addEventListener('change', function(event) {
         })(x);
     }
 }, false);
+}
 
 </script>

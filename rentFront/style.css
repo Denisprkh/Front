@@ -20,6 +20,11 @@ a{
     text-decoration: none;
 }
 
+p{
+    padding: 0;
+    margin: 0;
+}
+
 .header{
     height: 75px;
     background-color:#434242;
@@ -379,10 +384,15 @@ color: #545454;
     font-size: 48px;
     line-height: 80px;
     margin-left: 6px;
+
 }
 
 .row_items-input label:hover{
     cursor: pointer;
+}
+
+.preview{
+    translate: 0px -20px;
 }
 
 .dbf{
@@ -433,10 +443,132 @@ color: #545454;
     width: 80px;
     height: 80px;
     overflow: hidden;
-  }
-
-.usr__profile-logo__btn{
-    margin-top: 17px;
-    margin-left: 500px;
+    position: relative;
 }
+
+.preview{
+    width: 80px;
+    height: 80px;
+    z-index: 3;
+    margin-right: 20%;
+}
+
+/* USERS PROFILE */
+.profile__sides__handler{
+    display: flex;
+    margin-top: 93px;
+    
+}
+
+.profile__left__side{
+    width: 285px;
+    height: 93px;
+    display: inline;
+    
+}
+
+.lft__side__item{
+    width: 285px;
+    height: 28px;
+}
+
+.lft__side__item{
+    padding: 3px 148px 4px 58px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    width: 135px;
+    height: 28px;
+    white-space: nowrap;
+    vertical-align: center;
+    background-color:#F9F9F9;
+}
+
+.lft__side__item a{
+    color: #545454;
+}
+
+.lft__side__item:hover{
+    background-color:#545454;
+}
+
+.lft__side__item:hover a{
+    background: linear-gradient(180deg, #FACD68 0%, #FC76B3 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.profile__right__side{
+     margin-left: 27px;
+    /* margin-top: 140px;
+    width: 900px;
+    height: 636px;
+    background-color:#F9F9F9; */
+} 
+
+.profile__right__side__title{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    color: #545454;
+    width:700px;
+    height: 30px;
+}
+
+.profile__info_handler{
+    margin-top: 6px;
+    width: 700px;
+    height: 500px;
+    background-color:#F9F9F9;
+}
+
+.personal__data__items-title{
+    display: flex;
+    background: linear-gradient(180deg, #FACD68 0%, #FC76B3 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: 300px;
+    height: 40px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    
+}
+
+.second__data_item-title{
+    margin-left:100px;
+}
+
+.personal__data__items-title p{
+    margin-top: 35px;
+}
+
+.data__separator{
+    margin-left: 64px;
+}
+
+.personal__data_items{
+    display: flex;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #474747; 
+    width: 300px;
+    margin-top:50px;
+}
+
+
+
+.prsnl_data_item-two{
+    margin-left:120px;
+}
+
 
